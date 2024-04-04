@@ -1,0 +1,10 @@
+<div class="card  container ms-5 mt-3 border border-3 shadow shadow-lg col-3">
+    <img src="{{data.image}}" class="border m-1 rounded-pill p-1" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{data.name}}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a routerLink="/" class="btn btn-primary">Back</a>
+      <button class="btn btn-danger ms-3">Delete</button>
+      <button routerLink="/edit/{{data.id}}" class="btn btn-secondary ms-3">Edit</button>
+    </div>
+  </div>
