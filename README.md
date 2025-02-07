@@ -14,7 +14,7 @@ You can also use:
 
 - `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## 🏗️ Build
+#### 🏗️ Build
 
 Run `ng build` to build the project.  
 The build artifacts will be stored in the `dist/` directory.
