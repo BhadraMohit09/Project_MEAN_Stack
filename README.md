@@ -1,3 +1,5 @@
+![Wave Animation](https://capsule-render.vercel.app/api?type=waving&color=9823f5&height=150&section=header)
+
 #### 📦 Package6
 
 This project was generated with [![Angular](https://img.shields.io/badge/Angular-17.3.0-red?logo=angular)](https://github.com/angular/angular-cli).
