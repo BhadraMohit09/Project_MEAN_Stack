@@ -23,7 +23,7 @@ The build artifacts will be stored in the `dist/` directory.
 
 Run `ng test` to execute unit tests via [![Karma](https://img.shields.io/badge/Karma-Testing-green?logo=karma)](https://karma-runner.github.io).
 
-## 🧪 Running End-to-End Tests
+#### 🧪 Running End-to-End Tests
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice.  
 To use this command, you need to first add a package that implements end-to-end testing capabilities.
