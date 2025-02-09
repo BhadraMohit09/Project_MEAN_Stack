@@ -15,7 +15,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Ensures we get all history
+          fetch-depth: 0  # Ensures all history
 
       - name: Configure Git
         run: |
@@ -24,14 +24,16 @@ jobs:
 
       - name: Check for changes
         run: |
-          if git diff --quiet && git diff --staged --quiet; then
+          git add README.md
+          if git diff --cached --quiet; then
             echo "No changes detected. Skipping commit."
             exit 0
           fi
 
       - name: Commit & Push Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git pull origin main --rebase  # Avoid merge conflicts
-          git add README.md
-          git commit -m "Auto commit README changes [$(date +'%Y-%m-%d %H:%M:%S')]"
-          git push
+          git pull --ff-only  # Prevents merge conflicts
+          git commit -m "Auto commit README changes [$(date +'%Y-%m-%d %H:%M:%S')]" || exit 0
+          git push origin main
